@@ -36,3 +36,9 @@ pnpm dsh web
 ```sh
 npx @deepseek-ai/dsh web
 ```
+
+## 二次开发
+
+左侧固定网页 / 快速切窗的调研与实现规划：[docs/left-browser-pane.md](docs/left-browser-pane.md)。
+
+社区里没有完全对口的现成插件（最接近的 `dsh-better-sidebar` 把浏览器放在右侧）。自研插件目录：`plugins/left-browser/`。

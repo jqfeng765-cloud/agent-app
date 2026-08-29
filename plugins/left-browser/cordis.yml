@@ -1,0 +1,7 @@
+# Web profile overlay. `name` must be an absolute path before dsh will load it.
+# Example (replace with `pwd`/plugins/left-browser/src/index.ts):
+#
+# - insert:
+#     - id: left-browser
+#       name: /absolute/path/to/agent-app/plugins/left-browser/src/index.ts
+[]
