@@ -39,6 +39,25 @@ npx @deepseek-ai/dsh web
 
 ## 二次开发
 
-左侧固定网页 / 快速切窗的调研与实现规划：[docs/left-browser-pane.md](docs/left-browser-pane.md)。
+左侧固定网页 / 快速切窗的调研与实现规划：[docs/left-browser-pane.md](docs/left-browser-pane.md)。自研插件目录：`plugins/left-browser/`。
 
-社区里没有完全对口的现成插件（最接近的 `dsh-better-sidebar` 把浏览器放在右侧）。自研插件目录：`plugins/left-browser/`。
+### 已安装：dsh-better-sidebar
+
+用官方命令把社区工作台装进本机 web profile（右侧栏 + 底部面板，含内嵌浏览器 tab）：
+
+```sh
+dsh plugin --profile web add dsh-better-sidebar@latest
+```
+
+本环境已装到 `~/.dsh/profiles/web`，版本 `0.17.1`，并已放行 `node-pty` 构建脚本。其他机器可复用：
+
+```sh
+./scripts/install-better-sidebar.sh
+```
+
+然后启动 Web UI 并硬刷新（需要 Node `^22.19` 或 `>=24`；本环境默认 22.14 会因缺少 `zlib.createZstdDecompress` 启动失败）：
+
+```sh
+dsh web
+# 打开 http://127.0.0.1:3080 后 Ctrl/Cmd+Shift+R
+```

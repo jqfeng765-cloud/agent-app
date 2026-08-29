@@ -13,13 +13,13 @@
 | [@dsh-external/ego-browser](https://www.npmjs.com/package/@dsh-external/ego-browser) | Agent 浏览器 tab；有 better-sidebar 时挂到侧栏，否则浮动气泡 | 同样不提供左侧固定栏 |
 | 官方 `web_fetch` / `dsh-tool-web` | 模型抓取网页正文 | 不是可视化浏览器，不能开窗、切窗、钉栏 |
 
-`dsh-better-sidebar` 是最接近的现成能力（约 2.6k star，MIT）。如果只是「聊天旁边开网页」，可以先装它试手感：
+`dsh-better-sidebar` 是最接近的现成能力（约 2.6k star，MIT）。本仓库已按官方命令装进本机 web profile：
 
 ```sh
 dsh plugin --profile web add dsh-better-sidebar@latest
 ```
 
-它解决不了「固定在左侧」。本仓库要做的是一个**独立的左侧浏览器 Dock 插件**，不 fork `deepseek-harness`，也不替换官方左栏。
+当前版本 `0.17.1`，bundle 已写入 `~/.dsh/profiles/web`。其他机器用 `./scripts/install-better-sidebar.sh`。它解决不了「固定在左侧」；那条线仍走 `plugins/left-browser/`。
 
 ## 官方布局约束（必须遵守）
 
